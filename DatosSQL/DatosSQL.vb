@@ -9,6 +9,7 @@ Public Class DatosSQL
             Dim strConector As New System.Text.StringBuilder 'objeto almacena string de conexion
 
             With strConector
+                'Agrege comentario
                 .Append("Data Source=")
                 .Append(ConfigurationManager.AppSettings("ServerName"))
                 .Append(";Initial Catalog=")
