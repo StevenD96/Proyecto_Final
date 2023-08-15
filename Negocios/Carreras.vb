@@ -10,6 +10,15 @@
         End Try
     End Sub
 
+    Public Sub consultarCarrera()
+
+        Try
+            Dim datos As New Datos.DatosCarrera
+            datos.ConsultarCarrera()
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Sub
 
 
 
