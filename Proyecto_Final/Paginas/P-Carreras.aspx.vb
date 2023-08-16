@@ -2,6 +2,7 @@
     Inherits System.Web.UI.Page
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        consultar()
 
     End Sub
 
@@ -26,4 +27,16 @@
 
 
     End Sub
+
+    Public Sub consultar()
+        Dim iCarreras As New Negocios.Carreras
+
+        gvCarreras.DataSource = iCarreras.consultarCarrera()
+        gvCarreras.DataBind()
+
+
+    End Sub
+
+
+
 End Class
