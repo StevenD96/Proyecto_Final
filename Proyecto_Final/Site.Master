@@ -50,6 +50,12 @@
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/About">About</a></li>
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/Contact">Contact</a></li>
                          <li class="nav-item"><a class="nav-link" runat="server" href="~/Paginas/P-Carreras">P-Carreras</a></li>
+                         <li class="nav-item"><a class="nav-link" runat="server" href="~/Paginas/Login.aspx">Login</a></li>
+                         <li class="nav-item"><a class="nav-link" runat="server" href="~/Paginas/P-Funcionarios.aspx">P-Funcionarios</a></li>
+                   
+
+
+
 
                     </ul>
                 </div>
