@@ -151,6 +151,7 @@
     <Content Include="Global.asax" />
     <Content Include="Paginas\Login.aspx" />
     <Content Include="Paginas\P-Carreras.aspx" />
+    <Content Include="Paginas\P-Funcionarios.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -267,6 +268,13 @@
     </Compile>
     <Compile Include="Paginas\P-Carreras.aspx.vb">
       <DependentUpon>P-Carreras.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\P-Funcionarios.aspx.designer.vb">
+      <DependentUpon>P-Funcionarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\P-Funcionarios.aspx.vb">
+      <DependentUpon>P-Funcionarios.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Site.Master.designer.vb">
