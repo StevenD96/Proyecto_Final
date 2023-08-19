@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="DatosCarrera.vb" />
     <Compile Include="DatosCursos.vb" />
+    <Compile Include="DatosEstudiantes.vb" />
     <Compile Include="DatosFuncionarios.vb" />
     <Compile Include="DatosUsuario.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
