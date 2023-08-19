@@ -1,5 +1,12 @@
 ﻿Public Class DatosUsuario
 
+
+
+
+
+
+
+
     Public Function consultarUsuario(ByVal user As Entidades.Usuarios)
 
         Try
