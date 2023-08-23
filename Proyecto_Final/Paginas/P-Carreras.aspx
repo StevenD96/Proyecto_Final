@@ -4,22 +4,22 @@
 
     <div class="input-group form-group" >
         <span class="input-group-addon" id="basic-addon1">Codigo</span>
-        <asp:TextBox ID="txtCodigo" runat="server" class="form-control" placeholder="Username" aria-describedby="basic-addon1" required pattern="[A-Za-z0-9]+" title="Por favor utilice letras y números"></asp:TextBox>
+        <asp:TextBox ID="txtCodigo" runat="server" class="form-control" placeholder="Username" aria-describedby="basic-addon1"  pattern="[A-Za-z0-9]+" title="Por favor utilice letras y números" required ="true"></asp:TextBox>
 
     </div>
 
     <div class="input-group form-group">
-        <span class="input-group-addon" id="basic-addon1">Nombre</span>
+        <span class="input-group-addon" id="basic-addon2">Nombre</span>
         <asp:TextBox ID="txtNombre" runat="server" class="form-control" placeholder="Username" aria-describedby="basic-addon1"></asp:TextBox>
     </div>
 
      <div class="input-group form-group">
-        <span class="input-group-addon" id="basic-addon1">Grado</span>
+        <span class="input-group-addon" id="basic-addon3">Grado</span>
         <asp:TextBox ID="txtGrado" runat="server" class="form-control" placeholder="Username" aria-describedby="basic-addon1"></asp:TextBox>
     </div>
 
     <div class="input-group form-group">
-        <span class="input-group-addon" id="basic-addon1">Estado</span>
+        <span class="input-group-addon" id="basic-addon4">Estado</span>
         <asp:CheckBox ID="chkEstado" runat="server" />
       
     </div>

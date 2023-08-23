@@ -30,6 +30,33 @@ Public Class DatosSQL
         End Try
     End Sub
 
+
+    Public Function QueryDBwithDTConUnParametro(ByVal QuerySQL As String, ByVal usuario As String) As DataTable
+        Try
+
+            Dim cmd As New SqlCommand(QuerySQL, Me.sqlConn)
+
+            ' Agregar parámetro del usuario a la consulta
+            cmd.Parameters.AddWithValue("@Usuario", usuario)
+
+            Dim adapter As New SqlDataAdapter(cmd)
+            Dim Tabla_Datos As New DataTable
+
+            adapter.Fill(Tabla_Datos)
+
+            Return Tabla_Datos
+
+        Catch sql As SqlException
+            If sqlConn.State = ConnectionState.Open Then
+                sqlConn.Close()
+            End If
+            Throw sql
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
+
+
     Public Function QueryDBwithDT(ByVal QuerySQL As String) As DataTable
         Try
 

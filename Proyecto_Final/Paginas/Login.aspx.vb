@@ -1,6 +1,7 @@
 ﻿Public Class Login
     Inherits System.Web.UI.Page
 
+
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
     End Sub
@@ -10,18 +11,14 @@
 
 
         Try
-            Dim eUsuario As New Entidades.Usuarios
-            Dim iSeguridad As New Negocios.Seguridad
+            Dim eUsuario As New Negocios.Usuario(txtUsuario.Text, txtContrasena.Text)
 
-            eUsuario.usuario = txtUsuario.Text
-            eUsuario.contrasena = txtContrasena.Text
+            'MsgBox("Hubo un error al iniciar sesión", MsgBoxStyle.Exclamation, "Alerta")
+            Dim valor As String = eUsuario.esUsuario.ToString()
+            MsgBox(valor, MsgBoxStyle.Exclamation, "Alerta")
 
-            eUsuario = iSeguridad.validarLogin(eUsuario)
-
-            If eUsuario.validarCredencial Then
-                Session("usuario") = eUsuario
-                FormsAuthentication.RedirectFromLoginPage(eUsuario.usuario, False)
-
+            If eUsuario.esUsuario Then
+                Response.Redirect("~/", False)
             Else
                 ScriptManager.RegisterStartupScript(Me, GetType(Page), "Alerta", "javascript:alert('Hubo un error al inicio de sesión')", True)
 

@@ -1,26 +1,26 @@
 ﻿Public Class Seguridad
 
 
-    Public Function validarLogin(ByVal eUsuario As Entidades.Usuarios)
+    'public function validarlogin(byval eusuario as entidades.usuarios)
 
-        Try
+    '    try
 
-            Dim iDatos As New Datos.DatosUsuario
-            eUsuario.validarCredencial = False
+    '        dim idatos as new datos.datosusuario("gggj", "yutug")
+    '        eusuario.validarcredencial = false
 
-            Dim dt As DataTable = iDatos.consultarUsuario(eUsuario)
+    '        dim dt as datatable = idatos.consultarusuario(eusuario)
 
-            If dt.Rows.Count <> 0 Then
-                eUsuario.validarCredencial = True
-            End If
+    '        if dt.rows.count <> 0 then
+    '            eusuario.validarcredencial = true
+    '        end if
 
-            Return eUsuario
-        Catch ex As Exception
+    '        return eusuario
+    '    catch ex as exception
 
-        End Try
+    '    end try
 
 
-    End Function
+    ' End Function
 
 
 End Class
