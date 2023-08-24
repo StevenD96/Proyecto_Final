@@ -148,6 +148,9 @@
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
+    <Content Include="Estudiantes.aspx" />
+    <Content Include="Paginas\AgregarModificarFuncionarios.aspx" />
+    <Content Include="Funcionarios.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
     <Content Include="Paginas\Login.aspx" />
@@ -234,6 +237,27 @@
     </Compile>
     <Compile Include="Default.aspx.designer.vb">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Estudiantes.aspx.designer.vb">
+      <DependentUpon>Estudiantes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Estudiantes.aspx.vb">
+      <DependentUpon>Estudiantes.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\AgregarModificarFuncionarios.aspx.designer.vb">
+      <DependentUpon>AgregarModificarFuncionarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\AgregarModificarFuncionarios.aspx.vb">
+      <DependentUpon>AgregarModificarFuncionarios.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Funcionarios.aspx.designer.vb">
+      <DependentUpon>Funcionarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Funcionarios.aspx.vb">
+      <DependentUpon>Funcionarios.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>

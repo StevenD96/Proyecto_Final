@@ -1,5 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Configuration
+Imports System.Collections.ObjectModel
 
 Public Class DatosSQL
 
@@ -107,6 +108,58 @@ Public Class DatosSQL
     End Sub
 
 
+    Public Sub QueryDBwithDTModificarFuncionario(ByVal QuerySQL As String, ByVal funcionario As Entidades.Funcionarios)
+
+        Try
+
+            Dim cmd As New SqlCommand(QuerySQL, Me.sqlConn)
+            cmd.CommandType = CommandType.StoredProcedure
+
+            cmd.Parameters.AddWithValue("@Identificacion", funcionario.identificacion)
+
+            If Not String.IsNullOrEmpty(funcionario.estado) Then
+                cmd.Parameters.AddWithValue("@NuevoEstado", funcionario.estado)
+            Else
+                cmd.Parameters.AddWithValue("@NuevoEstado", DBNull.Value)
+            End If
+
+            If Not String.IsNullOrEmpty(funcionario.nombre) Then
+                cmd.Parameters.AddWithValue("@NuevoNombre", funcionario.nombre)
+            Else
+                cmd.Parameters.AddWithValue("@NuevoNombre", DBNull.Value)
+            End If
+
+            If Not String.IsNullOrEmpty(funcionario.apellidos) Then
+                cmd.Parameters.AddWithValue("@NuevosApellidos", funcionario.apellidos)
+            Else
+                cmd.Parameters.AddWithValue("@NuevosApellidos", DBNull.Value)
+            End If
+
+            If Not String.IsNullOrEmpty(funcionario.telefono) Then
+                cmd.Parameters.AddWithValue("@NuevoTelefono", funcionario.telefono)
+            Else
+                cmd.Parameters.AddWithValue("@NuevoTelefono", DBNull.Value)
+            End If
+
+            If Not String.IsNullOrEmpty(funcionario.correo) Then
+                cmd.Parameters.AddWithValue("@NuevoCorreo", funcionario.correo)
+            Else
+                cmd.Parameters.AddWithValue("@NuevoCorreo", DBNull.Value)
+            End If
+
+
+            sqlConn.Open()
+            ' Ejecutar el procedimiento almacenado
+            cmd.ExecuteNonQuery()
+        Catch sql As SqlException
+            If sqlConn.State = ConnectionState.Open Then
+                sqlConn.Close()
+            End If
+            Throw sql
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Sub
 #Region "Manejo de Procedimientos Alacenados"
     Public Sub ExecuteSP(ByVal SP_Nombre As String, ByVal listaParametros As List(Of SqlParameter))
         Try

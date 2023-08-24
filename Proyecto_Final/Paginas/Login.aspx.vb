@@ -11,7 +11,7 @@
 
 
         Try
-            Dim eUsuario As New Negocios.Usuario(txtUsuario.Text, txtContrasena.Text)
+            Dim eUsuario As New Negocios.GestorUsuarios(txtUsuario.Text, txtContrasena.Text)
 
             'MsgBox("Hubo un error al iniciar sesión", MsgBoxStyle.Exclamation, "Alerta")
             Dim valor As String = eUsuario.esUsuario.ToString()

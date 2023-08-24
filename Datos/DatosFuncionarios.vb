@@ -3,21 +3,16 @@
 Public Class DatosFuncionarios
 
 
-    'Metodo para insertar
+
+    Public Sub ModificarFuncionario(ByVal funcionario As Entidades.Funcionarios)
+        Dim storedProcedureName As String = "ModificarFuncionario"
+        Dim modificarBD As New DatosSQL.DatosSQL
+
+        modificarBD.QueryDBwithDTModificarFuncionario(storedProcedureName, funcionario)
+    End Sub
+
     Public Sub InsertarFuncionario(ByVal funcionario As Entidades.Funcionarios)
 
-
-        Try
-            Dim consultar As New Text.StringBuilder
-
-            consultar.Append($"insert into Funcionarios values ('{funcionario.usuario}', '{funcionario.contrasena}', '{funcionario.identificacion}', {funcionario.nombre}, '{funcionario.primerapellido}', '{funcionario.segundoapellido}' {funcionario.estado})")
-
-            Dim iDatos As New DatosSQL.DatosSQL
-            iDatos.QueryDB(consultar.ToString)
-
-        Catch ex As Exception
-            Throw ex
-        End Try
     End Sub
 
 

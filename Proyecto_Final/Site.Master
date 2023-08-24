@@ -39,7 +39,7 @@
 
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" runat="server" href="~/">Application name</a>
+                <a  id="bienvenida" class="navbar-brand" runat="server" href="~/">Application name</a>
                 <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -49,12 +49,13 @@
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/">Home</a></li>
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/About">About</a></li>
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/Contact">Contact</a></li>
-                         <li class="nav-item"><a class="nav-link" runat="server" href="~/Paginas/P-Carreras">P-Carreras</a></li>
-                         <li class="nav-item"><a class="nav-link" runat="server" href="~/Paginas/P-Funcionarios.aspx">P-Funcionarios</a></li>          
+                        <li class="nav-item"><a id="lnkEstudiantes" class="nav-link" runat="server" OnServerClick="lnkEstudiantes_Click">Estudiantes</a></li>
+                        <li class="nav-item"><a id="lnkFuncionarios" class="nav-link" runat="server" OnServerClick="lnkFuncionarios_Click">Funcionarios</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
+        <h1 id="indicacion" runat="server"></h1>
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>

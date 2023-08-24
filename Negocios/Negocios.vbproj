@@ -65,7 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Carreras.vb" />
-    <Compile Include="Funcionarios.vb" />
+    <Compile Include="GestorFuncionarios.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -82,7 +82,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Seguridad.vb" />
-    <Compile Include="Usuario.vb" />
+    <Compile Include="GestorUsuarios.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">

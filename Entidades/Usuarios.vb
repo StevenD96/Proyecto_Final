@@ -5,7 +5,6 @@
 
     'Public property tipousu as string 
 
-    Public Property validarCredencial As Boolean
 
 
 

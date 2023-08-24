@@ -10,13 +10,14 @@
 
 
         Try
-            Dim eUsuario As New Negocios.Usuario(txtUsuario.Text, txtContrasena.Text)
+            Dim eUsuario As New Negocios.GestorUsuarios(txtUsuario.Text, txtContrasena.Text)
 
             'MsgBox("Hubo un error al iniciar sesión", MsgBoxStyle.Exclamation, "Alerta")
-            Dim valor As String = eUsuario.esUsuario.ToString()
-            MsgBox(valor, MsgBoxStyle.Exclamation, "Alerta")
+            'Dim valor As String = eUsuario.esUsuario.ToString()
+            'MsgBox(valor, MsgBoxStyle.Exclamation, "Alerta")
 
             If eUsuario.esUsuario Then
+                Session("UsuarioActual") = eUsuario
                 Response.Redirect("~/", False)
             Else
                 ScriptManager.RegisterStartupScript(Me, GetType(Page), "Alerta", "javascript:alert('Hubo un error al inicio de sesión')", True)
