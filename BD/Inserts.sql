@@ -1,5 +1,6 @@
 Use MatriculaWeb;
---select * from VistaUsuariosRoles;
+--select * from Funcionarios f Inner join Personas p on p.Identificacion = f.IdPersona;
+
 -- Insertar valores en la tabla Usuarios
 INSERT INTO Usuarios (Usuario, Contrasena)
 VALUES ('usuario1', 'contrasena1'),
